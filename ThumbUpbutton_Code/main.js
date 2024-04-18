@@ -9,7 +9,7 @@ document.querySelectorAll(".post").forEach(post => {
 
         button.addEventListener("click", async () => {
 
-
+            rating.classList.add("post-rating-selected");
 
             ratings.forEach(rating => {
                 if (rating.classList.contains("post-rating-selected")) {
@@ -20,7 +20,6 @@ document.querySelectorAll(".post").forEach(post => {
                 }
             });
 
-            rating.classList.add("post-rating-selected");
 
             const likeOrDislike = likeRating === rating ? "like" : "dislike";
             const response = await fetch(`/posts/${postId}/${likeOrDislike}`);

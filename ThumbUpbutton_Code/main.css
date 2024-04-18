@@ -18,12 +18,6 @@
 	margin-right: 12px;
 }
 
-/* 버튼을 누른 후 색상*/
-.post-rating-selected > .post-rating-button,
-.post-rating-selected > .post-rating-count {
-	color: red;
-}
-
 /* 버튼과 개수 사이 거리 및 색상*/
 .post-rating-button {
 	margin-right: 6px;
@@ -33,5 +27,5 @@
 
 /* 버튼에 마우스를 놓으면 회색(#555555)에서 검은색(#000000)으로 변함*/
 .post-rating:not(.post-rating-selected) > .post-rating-button:hover {
-	color: #000000;
+	color: red;
 }
