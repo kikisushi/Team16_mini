@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="home/img/main/favicon.ico"/>
+  <title>팀 소개 웹페이지</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="home/static/homestyle.css" type="text/css">
+  <link rel="stylesheet" href="int/int.css" type="text/css">
+  <script type="module" src="home/static/function.js"></script>
+</head>
+
+<body>
+  <div class="updiv">
+    <div class="titlebox">
+      <h1 class="title" id="refresh" type="button">જ⁀첫 개발은 너무 어려워🗲</h1>
+      <h2 class="subtitle">〈sparta〉〈bootcamp〉
+        <span style="font-family: 'Nanum Gothic Coding', monospace; color: aquamarine;">
+          Team 16 = "The First Develop Is Too Hard"</span>
+        〈/bootcamp〉〈/sparta〉
+      </h2>
+    </div>
+
+    <div class="intro">
+      <div class="row row-cols-md-2">
+        <div class="left">
+          <div class="intro-titlebox">
+            <h4 class="intro-title">💬 ABOUT TEAM</h4>
+          </div>
+          <p>
+            서기 2015년... 5명의 비전공자가 "혹성 Node.js_5"에 불시착했습니다.
+            <br>
+            각 Player들은 생존을 위해 힘을 합쳐 미니 프로젝트를 성공해야 합니다.
+            <br>
+            첫 개발이 너무 어렵겠지만, player들은 반드시 힘을 합쳐 수료까지 해내십시오.
+          </p>
+        </div>
+        <div class="right">
+          <div class="intro-titlebox">
+            <h4 class="intro-title">💡 GROUND RULES</h4>
+          </div>
+          <ul>
+            <li>🕤 <b>09:30</b> 아침 회의</li>
+            <li>🕐 <b>13:00~14:00</b> 점심 식사</li>
+            <li>🕕 <b>18:00~19:00</b> 저녁 식사</li>
+            <li>🕣 <b>20:45</b> 저녁 회의</li>
+          </ul>
+          <ul>
+            <li>✅ 질문은 신속 과감, 답변은 친절 명확</li>
+            <li>✅ 특이사항 발생시, 팀원에게 공유!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-titlebox">
+    <h1 class="main-title" type="button" id="togglebottom"><span style="font-size: 40px;">👾 </span>Choose Player<span
+        style="font-size: 40px;">
+        👽</span></h1>
+  </div>
+  <div id="btmdiv" style="display: none;">
+    <div class="player">
+      <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card h-100">
+            <img class="faceimg" src="home/img/icon/dong.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <href class="card-title">👑👨‍🎓팀장: 김동재</href>
+              <button id="one1" type="button" class="btn btn-outline-primary">정보보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img class="faceimg" src="home/img/icon/hwang.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <href class="card-title">👨‍🎓팀원: 황인건</href>
+              <button id="two2" type="button" class="btn btn-outline-primary">정보보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img class="faceimg" src="home/img/icon/rin.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <href class="card-title">👩‍🎓팀원: 강하린</href>
+              <button id="three3" type="button" class="btn btn-outline-primary">정보보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img class="faceimg" src="home/img/icon/woo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <href class="card-title">👨‍🎓팀원: 전우찬</href>
+              <button id="four4" type="button" class="btn btn-outline-primary">정보보기</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img class="faceimg" src="home/img/icon/moon.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <href class="card-title">👨‍🎓팀원: 문현후</href>
+              <button id="five5" type="button" class="btn btn-outline-primary">정보보기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="teamimg">
+      <div id="mainimg" class="container text-center">
+        <div id=intHeader class="row">
+          <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+        </div>
+        <img src="home/img/main/zep.jpg" class="rounded my-5" alt="이미지 오류">
+      </div>
+      <div id="first" style="display: none;">
+        <!--개인 소개 div추가해야 할 부분-->
+        <!--추가 시 아래div 삭제-->
+        <div id="int" class="container text-center">
+          <!-- 첫 번째 열 -->
+          <div id=intHeader class="row">
+            <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+          </div>
+
+          <!--              두 번째 열             -->
+          <div class="row">
+            <!--            2열             1행      -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 ">
+              <!--2열 1행 1번째 카드-->
+              <div id="intCard" class="card mb-lg-3">
+                <img src="int/img/mbti사진/entj.png" class="card-img-top" alt="이미지 오류">
+                <div class="card-body">
+                  <h5 class="card-title">제 MBTI유형은 "ENTJ" 입니다</h5><br>
+                  <p class="card-text">분석적이고 객관적이며, 질서의 결함이나 비효율성을 빠르게 파악하고, 더 나은 새로운 해결책을 찾으려 합니다.</p>
+                </div>
+              </div>
+              <!--2열 1행 2번째 카드-->
+              <div id="intCard" class="card border-light mb-sm-3 mb-md-0 mb-lg-0" style="width:auto;">
+                <div class="card-header">blog / github</div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    📌click</h5>
+                  <p class="card-text">
+                    🗒️ 블로그 주소 <a href="https://redi3.tistory.com/">https://redi3.tistory.com/</a>
+                    <br>
+                    🗒️ 깃허브 주소 <a href="https://github.com/ReDi03">https://github.com/ReDi03</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--     메인카드        -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 my-3">
+              <div id="intCard" class="card" id="mainCard">
+                <img src="int/img/프로필사진/김동재.jpg" class="card-img-top" alt="이미지 오류" id="mainCardImg" />
+                <div class="card-body">
+                  <h5 class="card-title">Node.js 5기 김동재</h5>
+                  <hr />
+                  <p class="card-text">
+                  <p>📢 한마디</p>
+                  스펀지처럼 빠르게 습득할게요.
+                  <br>잘 부탁드립니다!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <!--     2열            3행   -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 mt-lg-0 mt-md-3 mt-sm-3">
+              <div id="intCard" class="card border-light mb-3" style="width:auto;">
+                <div class="card-header"> &#128171; 취미 or 좋아하는 음식</div>
+                <div class="card-body">
+                  <h5 class="card-title">마술과 삼겹살</h5>
+                  <p class="card-text">상호간의 커뮤니케이션과 철저함으로 만들어진 마술은 예술과 같다.
+                    <br>기름진 삼겹살은 항상 제 입맛과 활력을 돋게합니다.
+
+                  </p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mb-3 mt-lg-2" style="width: auto;">
+                <div class="card-header">&#128126; 협업 스타일과 장점</div>
+                <div class="card-body">
+                  <h5 class="card-title">도전적인 분위기메이커</h5>
+                  <p class="card-text">자신감으로 항상 도전적이며, 팀원들의 사기를 위한 좋은분위기를 위해 항상 노력합니다.
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mt-lg-2" style="width:auto;">
+                <div class="card-header">🚩 목표</div>
+                <div class="card-body">
+                  <h5 class="card-title">보드게임의 확장</h5>
+                  <p class="card-text">오프라인의 매력인 보드게임을 온라인으로 더욱 확장하고 싶습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+      </div>
+      <div id="second" style="display: none;">
+        <!--개인 소개 div추가해야 할 부분-->
+        <!--추가 시 아래div 삭제-->
+        <div id="int" class="container text-center">
+          <!-- 첫 번째 열 -->
+          <div id=intHeader class="row">
+            <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+          </div>
+
+          <!--              두 번째 열             -->
+          <div class="row">
+            <!--            2열             1행      -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 ">
+              <!--2열 1행 1번째 카드-->
+              <div id="intCard" class="card mb-lg-3">
+                <img src="int/img/mbti사진/entp.jpg" class="card-img-top" alt="이미지 오류">
+                <div class="card-body">
+                  <h5 class="card-title">제 MBTI유형은 "ENTP" 입니다</h5><br>
+                  <p class="card-text">대담하고 창의적이며 뛰어난 정신적 민첩성을 가지고 아이디어를 해체하고 재구성하는 경향이 있습니다. 어떤 저항에도 불구하고 적극적으로 목표를
+                    추구합니다.</p>
+                </div>
+              </div>
+              <!--2열 1행 2번째 카드-->
+              <div id="intCard" class="card border-light mb-sm-3 mb-md-0 mb-lg-0" style="width:auto;">
+                <div class="card-header">blog / github</div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    📌click</h5>
+                  <p class="card-text">
+                    🗒️ 블로그 주소 <a href="https://kikisushi24.tistory.com/">https://kikisushi24.tistory.com/</a>
+                    <br>
+                    🗒️ 깃허브 주소 <a href="https://github.com/kikisushi">https://github.com/kikisushi</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--     메인카드        -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 my-3">
+              <div class="card" id="intCard">
+                <img src="int/img/프로필사진/황인건.jpg" class="card-img-top" alt="이미지 오류" id="mainCardImg" />
+                <div class="card-body">
+                  <h5 class="card-title">Node.js 5기 황인건</h5>
+                  <hr />
+                  <p class="card-text">
+                  <p>📢 한마디</p>
+                  혼자 나아가다보면 <br>지쳐 포기할 수 있습니다.
+                  <br>다같이 수료하는 날까지 화이팅!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <!--     2열            3행   -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 mt-lg-0 mt-md-3 mt-sm-3">
+              <div id="intCard" class="card border-light mb-3" style="width:auto;">
+                <div class="card-header"> &#128171; 취미 or 좋아하는 음식</div>
+                <div class="card-body">
+                  <h5 class="card-title">스시와 사케</h5>
+                  <p class="card-text">스시의 역사와 기술에 깊이 관심있으며 집에서 직접 만들어 먹기도 합니다.
+                    <br>술과 음식의 조합인 마리아주를 중요시 여겨 사케는 당연히 빼놓을 수 없습니다.
+
+                  </p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mb-3 mt-lg-2" style="width: auto;">
+                <div class="card-header">&#128126; 협업 스타일과 장점</div>
+                <div class="card-body">
+                  <h5 class="card-title">아이디어와 적극성</h5>
+                  <p class="card-text">팀플레이 상황에서 좋은 아이디어가 떠오르면 적극적으로 제시하는 편입니다.
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mt-lg-2" style="width:auto;">
+                <div class="card-header">🚩 목표</div>
+                <div class="card-body">
+                  <h5 class="card-title">빠른 취업</h5>
+                  <p class="card-text">믿고 기다려주는 사람을 위해 취업준비 기간을 최대한 단축하고자합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+      </div>
+      <div id="third" style="display: none;">
+        <!--개인 소개 div추가해야 할 부분-->
+        <!--추가 시 아래div 삭제-->
+        <div id="int" class="container text-center">
+          <!-- 첫 번째 열 -->
+          <div id=intHeader class="row">
+            <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+          </div>
+
+          <!--              두 번째 열             -->
+          <div class="row">
+            <!--            2열             1행      -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 ">
+              <!--2열 1행 1번째 카드-->
+              <div id="intCard" class="card mb-lg-3">
+                <img src="int/img/mbti사진/intp.jpg" class="card-img-top" alt="이미지 오류">
+                <div class="card-body">
+                  <h5 class="card-title">제 MBTI유형은 "INTP" 입니다</h5><br>
+                  <p class="card-text">상상력과 호기심이 넘치는 성격으로 자신의 아이디어에 대해 끊임없이 생각하곤 합니다. 유명한 철학자와 과학자 중 INTP가 많은 것도 이 때문일
+                    것입니다.</p>
+                </div>
+              </div>
+              <!--2열 1행 2번째 카드-->
+              <div id="intCard" class="card border-light mb-sm-3 mb-md-0 mb-lg-0" style="width:auto;">
+                <div class="card-header">blog / github</div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    📌click</h5>
+                  <p class="card-text">
+                    🗒️ 블로그 주소
+                    <br><a href="https://dearco-nell.tistory.com/">https://dearco-nell.tistory.com/</a>
+                    <br>
+                    🗒️ 깃허브 주소
+                    <br><a href="https://github.com/HarinKang240322">https://github.com/HarinKang240322</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--     메인카드        -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 my-3">
+              <div id="intCard" class="card" id="mainCard">
+                <img src="int/img/프로필사진/강하린.jpg" class="card-img-top" alt="이미지 오류" id="mainCardImg" />
+                <div class="card-body">
+                  <h5 class="card-title">Node.js 5기 강하린</h5>
+                  <hr />
+                  <p class="card-text">
+                  <p>📢 한마디</p>
+                  함께 처음을 맞이하는 팀원분들과 적극적인 소통을 통해 성장해가는 개발자가 되겠습니다!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <!--     2열            3행   -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 mt-lg-0 mt-md-3 mt-sm-3">
+              <div id="intCard" class="card border-light mb-3" style="width:auto;">
+                <div class="card-header"> &#128171; 취미 or 좋아하는 음식</div>
+                <div class="card-body">
+                  <h5 class="card-title">음악과 산책 그리고 소울푸드</h5>
+                  <p class="card-text">좋아하는 음악과 자연소리를 들으며 천천히 오래 걷는 것을 좋아합니다. 소울푸드는 구운 치킨과 떡볶이!
+                  </p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mb-3 mt-lg-2" style="width: auto;">
+                <div class="card-header">&#128126; 협업 스타일과 장점</div>
+                <div class="card-body">
+                  <h5 class="card-title">조용히 시끄러운 지원자</h5>
+                  <p class="card-text">의욕이 앞서 홀로 고분군투하기도 하지만, 팀 프로젝트에 도움이 되기 위해 최선을 다합니다.
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mt-lg-2" style="width:auto;">
+                <div class="card-header">🚩 목표</div>
+                <div class="card-body">
+                  <h5 class="card-title">곁에 두고 싶은 개발자</h5>
+                  <p class="card-text">웹개발의 기반을 탄탄하게 다져서 팀원들을 든든하게 지원해줄 수 있는 개발자가 되고 싶습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fourth" style="display: none;">
+        <!--개인 소개 div추가해야 할 부분-->
+        <!--추가 시 아래div 삭제-->
+        <div id="int" class="container text-center">
+          <!-- 첫 번째 열 -->
+          <div id=intHeader class="row">
+            <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+          </div>
+
+          <!--              두 번째 열             -->
+          <div class="row">
+            <!--            2열             1행      -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 ">
+              <!--2열 1행 1번째 카드-->
+              <div id="intCard" class="card mb-lg-3">
+                <img src="int/img/mbti사진/intp.jpg" class="card-img-top" alt="이미지 오류">
+                <div class="card-body">
+                  <h5 class="card-title">제 MBTI유형은 "INTP" 입니다</h5><br>
+                  <p class="card-text">분석적이고 다양한 주제에 호기심이 많습니다. 목표를 달성하기 위해 노력하며 일을 완료하기 위해 집중합니다.</p>
+                </div>
+              </div>
+              <!--2열 1행 2번째 카드-->
+              <div id="intCard" class="card border-light mb-sm-3 mb-md-0 mb-lg-0" style="width:auto;">
+                <div class="card-header">blog / github</div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    📌click</h5>
+                  <p class="card-text">
+                    🗒️ 블로그 주소 <a href="https://uchanjeon.tistory.com/">https://uchanjeon.tistory.com/</a>
+                    <br>
+                    🗒️ 깃허브 주소 <a href="https://github.com/uchanjeon">https://github.com/uchanjeon</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--     메인카드        -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 my-3">
+              <div id="intCard" class="card" id="mainCard">
+                <img src="int/img/프로필사진/전우찬.jpg" class="card-img-top" alt="이미지 오류" id="mainCardImg" />
+                <div class="card-body">
+                  <h5 class="card-title">Node.js 5기 전우찬</h5>
+                  <hr />
+                  <p class="card-text">
+                  <p>📢 한마디</p>
+                  열심히 공부하고
+                  <br>활발히 소통해볼게요
+                  <br>잘 부탁드립니다.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <!--     2열            3행   -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 mt-lg-0 mt-md-3 mt-sm-3">
+              <div id="intCard" class="card border-light mb-3" style="width:auto;">
+                <div class="card-header"> &#128171; 취미 or 좋아하는 음식</div>
+                <div class="card-body">
+                  <h5 class="card-title">파스타</h5>
+                  <p class="card-text"> 종류도 다양하고 간단하게 즐길 수 있어서 좋아합니다.
+
+                  </p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mb-3 mt-lg-2" style="width: auto;">
+                <div class="card-header">&#128126; 협업 스타일과 장점</div>
+                <div class="card-body">
+                  <h5 class="card-title">묵묵하지만 필요할 땐 말해요</h5>
+                  <p class="card-text">평소에 말이 많은 편은 아니지만
+                    <br>꼭 필요한 내용이 있거나
+                    <br>괜찮은 아이디어가 떠오르면
+                    <br>제시하는 편입니다.
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mt-lg-2" style="width:auto;">
+                <div class="card-header">🚩 목표</div>
+                <div class="card-body">
+                  <h5 class="card-title">믿고 맡기는 개발자</h5>
+                  <p class="card-text">완성도와 마감일에서 만큼은 믿음을 주는 개발자가 되고 싶습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fifth" style="display: none;">
+        <!--개인 소개 div추가해야 할 부분-->
+        <!--추가 시 아래div 삭제-->
+        <div id="int" class="container text-center">
+          <!-- 첫 번째 열 -->
+          <div id=intHeader class="row">
+            <h3><small>⭐</small> Introduction <small>⭐</small></h3>
+          </div>
+
+          <!--              두 번째 열             -->
+          <div class="row">
+            <!--            2열             1행      -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 ">
+              <!--2열 1행 1번째 카드-->
+              <div id="intCard" class="card mb-lg-3">
+                <img src="int/img/mbti사진/intp.jpg" class="card-img-top" alt="이미지 오류">
+                <div class="card-body">
+                  <h5 class="card-title">제 MBTI유형은 "INTP" 입니다</h5><br>
+                  <p class="card-text">논리술사는 상상력과 호기심이 넘치는 성격으로 자신의 아이디어에 대해 끊임없이 생각하곤 합니다.</p>
+                </div>
+              </div>
+              <!--2열 1행 2번째 카드-->
+              <div id="intCard" class="card border-light mb-sm-3 mb-md-0 mb-lg-0" style="width:auto;">
+                <div class="card-header">blog / github</div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    📌click</h5>
+                  <p class="card-text">
+                    🗒️ 블로그 주소 <a href="https://hyunhoooo.tistory.com/">https://hyunhoooo.tistory.com/</a>
+                    <br>
+                    🗒️ 깃허브 주소 <a href="https://github.com/moonhyunhu">https://github.com/moonhyunhu</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--     메인카드        -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 my-3">
+              <div id="intCard" class="card" id="mainCard">
+                <img src="int/img/프로필사진/문현후.jpg" class="card-img-top" alt="이미지 오류" id="mainCardImg" />
+                <div class="card-body">
+                  <h5 class="card-title">Node.js 5기 문현후</h5>
+                  <hr />
+                  <p class="card-text">
+                  <p>📢 한마디</p>
+                  활발하게 소통하면서<br> 열심히 하겠습니다. 앞으로<br> 잘 부탁드립니다!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <!--     2열            3행   -->
+            <div id="cardsize" class="col-sm-12 col-md-5 col-lg-4 mt-lg-0 mt-md-3 mt-sm-3">
+              <div id="intCard" class="card border-light mb-3" style="width:auto;">
+                <div class="card-header"> &#128171; 취미 or 좋아하는 음식</div>
+                <div class="card-body">
+                  <h5 class="card-title">볼링, 게임 그리고 국밥</h5>
+                  <p class="card-text">LOL 에메랄드 2티어
+                    <br>볼링 애버리지 140<br> 잘하진 않지만 즐겨하고<br> 든든한 국밥을 좋아합니다!
+
+                  </p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mb-3 mt-lg-2" style="width: auto;">
+                <div class="card-header">&#128126; 협업 스타일과 장점</div>
+                <div class="card-body">
+                  <h5 class="card-title">조용한 지원자</h5>
+                  <p class="card-text">평소엔 조용하지만 해야할 때는 <br>볼륨이 커지고 팀 의견을 최대한 <br>맞추는 스타일입니다.</p>
+                </div>
+              </div>
+              <div id="intCard" class="card border-light mt-lg-2" style="width:auto;">
+                <div class="card-header">🚩 목표</div>
+                <div class="card-body">
+                  <h5 class="card-title">성장한 개발자</h5>
+                  <p class="card-text">과거 4월의 자신보다 얼마나 많이 성장했는지 체감하고 싶습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
