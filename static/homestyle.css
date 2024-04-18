@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=East+Sea+Dokdo&family=Jersey+10&family=Moirai+One&family=Nanum+Gothic+Coding&family=Noto+Sans+KR&display=swap');
 
 * {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -30,8 +30,7 @@ body {
   font-style: normal;
   font-size: 65px;
   color: white;
-  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white,
-    0px -1px white;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
   text-align: center;
   margin: 10px auto 10px auto;
 }
@@ -86,12 +85,11 @@ body {
   font-size: 35px;
   text-align: center;
   color: rgb(255, 137, 192);
-  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white,
-    0px -1px white;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
 }
 
 .left-content {
-  font-family: "Dongle", sans-serif;
+  font-family: 'Dongle', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
@@ -120,11 +118,12 @@ li {
 
 .player {
   border-radius: 20px;
-  border: solid midnightblue 3px;
+  border: solid midnightblue 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
-  width: 74%;
+  width: 68%;
   margin: 0px auto 50px auto;
   padding: 20px;
+  background-color: rgba(136, 61, 249, 0.5);
 }
 
 .card-body {
@@ -135,7 +134,7 @@ li {
 }
 
 .card-title {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
