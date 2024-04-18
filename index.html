@@ -13,6 +13,272 @@
   <link rel="stylesheet" href="static/int.css" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="module" src="static/function.js"></script>
+
+
+
+  <script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+		import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+		import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+		import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+
+		// Firebase 구성 정보 설정
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+			apiKey: "AIzaSyAay65n7aYij5COWHPojo4b2RnJImgx6O0",
+			authDomain: "like-database.firebaseapp.com",
+			projectId: "like-database",
+			storageBucket: "like-database.appspot.com",
+			messagingSenderId: "1076872568019",
+			appId: "1:1076872568019:web:9b59b53de3e2ea12e7c826",
+			measurementId: "G-N8HE9RP80Y"
+		};
+
+		// Firebase 인스턴스 초기화
+		const app = initializeApp(firebaseConfig);
+		const db = getFirestore(app);
+		/*
+
+		$("#up").click(async function () {
+			let like = $('#count').html();
+			console.log(like)
+			let doc = {
+				'count':like
+			};
+			await addDoc(collection(db, "likes"), doc);
+			alert('응원 감사합니다!');
+		})
+
+		$("#down").click(async function () {
+			let dislike = $('#count1').html();
+			console.log(dislike)
+			let doc1 = {
+				'count':dislike
+			};
+			await addDoc(collection(db, "dislikes"), doc1);
+			alert('ㅠㅠ');
+		})
+
+		let likedocs = await getDocs(collection(db, "likes"));
+		likedocs.forEach((doc) => {
+			let row = doc.data();
+
+			let like = row['count'];
+
+			$('#count').append(like);
+		})
+
+		let dislikedocs = await getDocs(collection(db, "dislikes"));
+		dislikedocs.forEach((doc1) => {
+			let row1 = doc1.data();
+
+			let dislike = row1['count'];
+
+			$('#count1').append(dislike);
+		})*/
+
+    // 좋아요를 클릭했을 때
+		$("#up1").click(async function () {
+			let like = $('#count1').html();
+			console.log(like);
+			let doc = {
+				'count': like
+			};
+			await addDoc(collection(db, "hik_likes"), doc);
+			alert('응원 감사합니다!');
+		})
+
+		// 싫어요를 클릭했을 때
+		$("#down1").click(async function () {
+			let dislike = $('#discount1').html();
+			console.log(dislike);
+			let doc1 = {
+				'count': dislike
+			};
+			await addDoc(collection(db, "hik_dislikes"), doc1);
+			alert('ㅠㅠ');
+		})
+
+		// 좋아요와 싫어요 수를 받아오는 함수
+		async function fetchCounts1() {
+			// 좋아요 수 받아오기
+			let likedocs = await getDocs(collection(db, "hik_likes"));
+			let latestLike = 0;
+			likedocs.forEach((doc) => {
+				let count = parseInt(doc.data().count);
+				if (count > latestLike) {
+					latestLike = count;
+				}
+			});
+			$('#count1').html(latestLike);
+
+			// 싫어요 수 받아오기
+			let dislikedocs = await getDocs(collection(db, "hik_dislikes"));
+			let latestDislike = 0;
+			dislikedocs.forEach((doc1) => {
+				let count = parseInt(doc1.data().count);
+				if (count > latestDislike) {
+					latestDislike = count;
+				}
+			});
+			$('#discount1').html(latestDislike);
+		}
+
+		// 페이지 로드 시 좋아요와 싫어요 수를 받아옴
+		fetchCounts1();
+
+    // 좋아요를 클릭했을 때
+		$("#up2").click(async function () {
+			let like = $('#count2').html();
+			console.log(like);
+			let doc = {
+				'count': like
+			};
+			await addDoc(collection(db, "khr_likes"), doc);
+			alert('응원 감사합니다!');
+		})
+
+		// 싫어요를 클릭했을 때
+		$("#down2").click(async function () {
+			let dislike = $('#discount2').html();
+			console.log(dislike);
+			let doc1 = {
+				'count': dislike
+			};
+			await addDoc(collection(db, "khr_dislikes"), doc1);
+			alert('ㅠㅠ');
+		})
+
+		// 좋아요와 싫어요 수를 받아오는 함수
+		async function fetchCounts2() {
+			// 좋아요 수 받아오기
+			let likedocs = await getDocs(collection(db, "khr_likes"));
+			let latestLike = 0;
+			likedocs.forEach((doc) => {
+				let count = parseInt(doc.data().count);
+				if (count > latestLike) {
+					latestLike = count;
+				}
+			});
+			$('#count2').html(latestLike);
+
+			// 싫어요 수 받아오기
+			let dislikedocs = await getDocs(collection(db, "khr_dislikes"));
+			let latestDislike = 0;
+			dislikedocs.forEach((doc1) => {
+				let count = parseInt(doc1.data().count);
+				if (count > latestDislike) {
+					latestDislike = count;
+				}
+			});
+			$('#discount2').html(latestDislike);
+		}
+
+		// 페이지 로드 시 좋아요와 싫어요 수를 받아옴
+		fetchCounts2(); 
+
+    // 좋아요를 클릭했을 때
+		$("#up3").click(async function () {
+			let like = $('#count3').html();
+			console.log(like);
+			let doc = {
+				'count': like
+			};
+			await addDoc(collection(db, "jwc_likes"), doc);
+			alert('응원 감사합니다!');
+		})
+
+		// 싫어요를 클릭했을 때
+		$("#down3").click(async function () {
+			let dislike = $('#discount3').html();
+			console.log(dislike);
+			let doc1 = {
+				'count': dislike
+			};
+			await addDoc(collection(db, "jwc_dislikes"), doc1);
+			alert('ㅠㅠ');
+		})
+
+		// 좋아요와 싫어요 수를 받아오는 함수
+		async function fetchCounts3() {
+			// 좋아요 수 받아오기
+			let likedocs = await getDocs(collection(db, "jwc_likes"));
+			let latestLike = 0;
+			likedocs.forEach((doc) => {
+				let count = parseInt(doc.data().count);
+				if (count > latestLike) {
+					latestLike = count;
+				}
+			});
+			$('#count3').html(latestLike);
+
+			// 싫어요 수 받아오기
+			let dislikedocs = await getDocs(collection(db, "jwc_dislikes"));
+			let latestDislike = 0;
+			dislikedocs.forEach((doc1) => {
+				let count = parseInt(doc1.data().count);
+				if (count > latestDislike) {
+					latestDislike = count;
+				}
+			});
+			$('#discount3').html(latestDislike);
+		}
+
+		// 페이지 로드 시 좋아요와 싫어요 수를 받아옴
+		fetchCounts3();
+
+    // 좋아요를 클릭했을 때
+		$("#up4").click(async function () {
+			let like = $('#count4').html();
+			console.log(like);
+			let doc = {
+				'count': like
+			};
+			await addDoc(collection(db, "mhh_likes"), doc);
+			alert('응원 감사합니다!');
+		})
+
+		// 싫어요를 클릭했을 때
+		$("#down4").click(async function () {
+			let dislike = $('#discount4').html();
+			console.log(dislike);
+			let doc1 = {
+				'count': dislike
+			};
+			await addDoc(collection(db, "mhh_dislikes"), doc1);
+			alert('ㅠㅠ');
+		})
+
+		// 좋아요와 싫어요 수를 받아오는 함수
+		async function fetchCounts4() {
+			// 좋아요 수 받아오기
+			let likedocs = await getDocs(collection(db, "mhh_likes"));
+			let latestLike = 0;
+			likedocs.forEach((doc) => {
+				let count = parseInt(doc.data().count);
+				if (count > latestLike) {
+					latestLike = count;
+				}
+			});
+			$('#count4').html(latestLike);
+
+			// 싫어요 수 받아오기
+			let dislikedocs = await getDocs(collection(db, "mhh_dislikes"));
+			let latestDislike = 0;
+			dislikedocs.forEach((doc1) => {
+				let count = parseInt(doc1.data().count);
+				if (count > latestDislike) {
+					latestDislike = count;
+				}
+			});
+			$('#discount4').html(latestDislike);
+		}
+
+		// 페이지 로드 시 좋아요와 싫어요 수를 받아옴
+		fetchCounts4();
+	</script>
+
 </head>
 
 <body>
@@ -74,12 +340,12 @@
               <div class="post" data-post-id="thumb">
                 <div class="post-ratings-container">
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="up1">thumb_up</span>
+                    <span class="post-rating-count" id="count1"></span>
                   </div>
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="down1">thumb_down</span>
+                    <span class="post-rating-count" id="discount1"></span>
                   </div>
                 </div>
               </div>
@@ -95,12 +361,12 @@
               <div class="post" data-post-id="thumb">
                 <div class="post-ratings-container">
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="up2">thumb_up</span>
+                    <span class="post-rating-count" id="count2"></span>
                   </div>
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="down2">thumb_down</span>
+                    <span class="post-rating-count" id="discount2"></span>
                   </div>
                 </div>
               </div>
@@ -116,12 +382,12 @@
               <div class="post" data-post-id="thumb">
                 <div class="post-ratings-container">
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="up3">thumb_up</span>
+                    <span class="post-rating-count" id="count3"></span>
                   </div>
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="down3">thumb_down</span>
+                    <span class="post-rating-count" id="discount3"></span>
                   </div>
                 </div>
               </div>
@@ -137,12 +403,12 @@
               <div class="post" data-post-id="thumb">
                 <div class="post-ratings-container">
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="up4">thumb_up</span>
+                    <span class="post-rating-count" id="count4"></span>
                   </div>
                   <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
+                    <span class="post-rating-button material-icons" id="down4">thumb_down</span>
+                    <span class="post-rating-count" id="discount4"></span>
                   </div>
                 </div>
               </div>

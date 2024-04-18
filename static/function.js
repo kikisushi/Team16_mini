@@ -175,6 +175,7 @@ document.querySelectorAll(".post").forEach(post => {
 
             ratings.forEach(rating => {
                 if (rating.classList.contains("post-rating-selected")) {
+                    const count = rating.querySelector(".post-rating-count");
 
                     count.textContent = Math.max(0, Number(count.textContent) + 1);
                     rating.classList.remove("post-rating-selected");
@@ -183,12 +184,9 @@ document.querySelectorAll(".post").forEach(post => {
 
 
             const likeOrDislike = likeRating === rating ? "like" : "dislike";
-            const response = await fetch(`/posts/${postId}/${likeOrDislike}`);
-            const body = await response.json();
         });
     });
 });
-
 
 /*
 $("#five5").click(async function () {
