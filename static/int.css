@@ -23,7 +23,7 @@ small {
   border: solid midnightblue 3px;
   padding: 10px 30px 20px 30px;
 
-  background-image: url('img/mbti사진/intBackground.jpg');
+  background-image: url('../img/main/intBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
@@ -35,7 +35,7 @@ small {
   border: solid midnightblue 3px;
   padding: 10px 30px 20px 30px;
 
-  background-image: url('img/mbti사진/intBackground.jpg');
+  background-image: url('../img/main/intBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
