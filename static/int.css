@@ -45,3 +45,7 @@ small {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
   border: solid 1px midnightblue;
 }
+
+h5 {
+  font-size: 40px;
+}
