@@ -1,25 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Like/Dislike Counter</title>
-	<link rel="stylesheet" href="main.css">
-	<script src="main.js" defer></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like/Dislike Counter</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+
+        // Firebase 구성 정보 설정
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAay65n7aYij5COWHPojo4b2RnJImgx6O0",
+            authDomain: "like-database.firebaseapp.com",
+            projectId: "like-database",
+            storageBucket: "like-database.appspot.com",
+            messagingSenderId: "1076872568019",
+            appId: "1:1076872568019:web:9b59b53de3e2ea12e7c826",
+            measurementId: "G-N8HE9RP80Y"
+        };
+
+        // Firebase 인스턴스 초기화
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        $("#up").click(async function () {
+            let like = $('#count').html();
+            console.log(like)
+            let doc = {
+                'count':like
+            };
+            await addDoc(collection(db, "likes"), doc);
+            alert('응원 감사합니다!');
+        })
+
+		$("#down").click(async function () {
+            let dislike = $('#count1').html();
+            console.log(dislike)
+            let doc = {
+                'count':dislike
+            };
+            await addDoc(collection(db, "dislikes"), doc);
+            alert('ㅠㅠ');
+        })
+
+        let likedocs = await getDocs(collection(db, "likes"));
+        likedocs.forEach((doc) => {
+            let row = doc.data();
+
+            let like = row['count'];
+
+            $('#count').append(like);
+        })
+
+		let dislikedocs = await getDocs(collection(db, "dislikes"));
+        dislikedocs.forEach((doc) => {
+            let row = doc.data();
+
+            let dislike = row['count1'];
+
+            $('#count1').append(dislike);
+        })
+
+
+    </script>
 </head>
+
 <body>
-	<div class="post" data-post-id="thumb">
-		<div class="post-ratings-container">
-			<div class="post-rating">
-				<span class="post-rating-button material-icons">thumb_up</span>
-				<span class="post-rating-count">0</span>
-			</div>
-			<div class="post-rating">
-				<span class="post-rating-button material-icons">thumb_down</span>
-				<span class="post-rating-count">0</span>
-			</div>
-		</div>
-	</div>
+    <div class="post" data-post-id="thumb">
+        <div class="post-ratings-container">
+            <div class="post-rating">
+                <span class="post-rating-button material-icons" id="up" type="button">thumb_up</span>
+                <span class="post-rating-count" id="count">0</span>
+            </div>
+            <div class="post-rating">
+                <span class="post-rating-button material-icons" id="down">thumb_down</span>
+                <span class="post-rating-count" id="count1">0</span>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
