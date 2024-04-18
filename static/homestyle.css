@@ -144,3 +144,17 @@ li {
   align-items: center;
   justify-content: center;
 }
+
+.mainimg {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zepimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
