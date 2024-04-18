@@ -162,3 +162,28 @@ li {
   height: auto;
   border-radius: 20px;
 }
+
+.post-ratings-container {
+	display: flex;
+  margin-top: -10px;
+}
+
+.post-rating {
+	display: flex;
+	align-items: center;
+	cursor: default;
+}
+
+.post-rating:not(:last-child) {
+	margin-right: 12px;
+}
+
+.post-rating-button {
+	margin-right: 6px;
+	cursor: pointer;
+	color: #555555;
+}
+
+.post-rating:not(.post-rating-selected) > .post-rating-button:hover {
+	color: red;
+}
